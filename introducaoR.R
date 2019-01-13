@@ -49,9 +49,18 @@ vetor_literal[3]                                       # Saida: "Paulo"
 vetor_literal[1]                                       # Saida: "Eng"
 
 
+# Funções built-in do R
+numero_inteiro<-7                                      # Nova atribuição para numero_inteiro no valor 7.
+
+log(numero_inteiro)                                    # Aqui calcula o logaritmo de numero_inteiro.     Saida: 1.94591
+sqrt(numero_inteiro)                                   # Aqui calcula a raiz quadrada de numero_inteiro. Saida: 2.645751
+factorial(numero_inteiro)                              # Aqui calcula o fatorial de numero_inteiro. Saida: 5040
+
+length(vetor_literal)                                  # Com esta função é possivel verificar o tamanho do vetor(quantidade de elementos). 
 
 
-# Funções prontras do R
+
+
 
 
 
