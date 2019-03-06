@@ -80,6 +80,56 @@ A
 
 # Array é coleção de matrizes
 
+#val<- scan()
+alunos<- scan(what = "character") #c("Alice", "Bruno", "Catia", "Pedro", "Rodnei", "Bianca", "Gabriel")
+emails<- scan(what = "character") #c("Alice@gmail.com", "Bruno@gmail.com", "Catia@gmail.com", "Pedro@gmail.com", "Rodnei@gmail.com", "Bianca@gmail.com", "Gabriel@gmail.com")
+
+notas<- scan()                    #c(4,5,10,7,8,4,9,8,7,0,4,5,8,6)
+length(notas)
+
+tam<- length(notas)/2
+medias<- 0
+cont<- 1
+
+for(i in 1:tam){
+  medias[i]<- (notas[cont] + notas[i*2])/2
+  print(notas[i])
+  cont<- cont+2
+  print(cont)
+}
+
+nota1<-0
+nota2<-0
+y<-0
+x<-0
+for(i in 1:length(notas)){
+  if(i %% 2 != 0){
+    x<-x+1
+    nota1[x]<- notas[i]
+  }else{
+    y<-y+1
+    nota2[y]<- notas[i]
+  }
+    
+
+  
+}
+
+cadastro<- data.frame(alunos,emails, nota1, nota2, medias)
+cadastro[,1]<- as.character(alunos)
+
+aprovados<- 0
+cont_ap<-1
+#attach(cadastro)
+for(i in 1:dim(cadastro)[1]){
+  if(cadastro[i,5] >= 7){
+    aprovados[cont_ap]<- cadastro$alunos[i]
+    cont_ap<- cont_ap+1
+  }
+}
+
+print("Parabéns aprovados:")
+aprovados
 
 
 
